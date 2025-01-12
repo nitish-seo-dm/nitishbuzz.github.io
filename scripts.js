@@ -1,28 +1,61 @@
-// Pop-up Show and Close Logic
-const popup = document.getElementById('popup');
-const popUpButton = document.getElementById('popUpButton');
-const closeButton = document.getElementsByClassName('close-btn')[0];
-
-popUpButton.onclick = function() {
-    popup.style.display = 'flex';
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
 }
 
-closeButton.onclick = function() {
-    popup.style.display = 'none';
+.container {
+    width: 90%;
+    margin: 0 auto;
 }
 
-window.onclick = function(event) {
-    if (event.target == popup) {
-        popup.style.display = 'none';
+header {
+    background-color: #ff7e5f;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+.hero {
+    background-color: #f1f1f1;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+}
+
+.categories li {
+    list-style: none;
+    background-color: #ff7e5f;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .categories {
+        flex-direction: column;
     }
 }
-
-// Celebration on Button Click
-document.getElementById("happyButton").addEventListener("click", function() {
-    let celebration = document.getElementById("celebration");
-    celebration.innerHTML = "🎉🎉🎉";
-    celebration.style.display = "block";
-    setTimeout(function() {
-        celebration.style.display = "none";
-    }, 3000);
-});
