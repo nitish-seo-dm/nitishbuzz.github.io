@@ -1,12 +1,14 @@
-// Add interactivity (like upvotes)
-document.addEventListener("DOMContentLoaded", () => {
-    const upvoteButtons = document.querySelectorAll(".upvote");
+// Dynamic Upvote System
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.card');
 
-    upvoteButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            let count = parseInt(button.innerText) || 0;
-            count++;
-            button.innerText = count + " Upvotes";
+    cards.forEach(card => {
+        const upvoteButton = document.createElement('button');
+        upvoteButton.textContent = 'Upvote';
+        upvoteButton.style.marginTop = '1rem';
+        upvoteButton.addEventListener('click', () => {
+            alert('You upvoted this!');
         });
+        card.appendChild(upvoteButton);
     });
 });
