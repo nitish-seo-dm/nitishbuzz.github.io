@@ -1,23 +1,12 @@
-document.querySelectorAll('.upvote').forEach((btn) => {
-    btn.addEventListener('click', function() {
-        alert('You have upvoted this post!');
+// Add interactivity (like upvotes)
+document.addEventListener("DOMContentLoaded", () => {
+    const upvoteButtons = document.querySelectorAll(".upvote");
+
+    upvoteButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            let count = parseInt(button.innerText) || 0;
+            count++;
+            button.innerText = count + " Upvotes";
+        });
     });
 });
-
-document.querySelectorAll('.downvote').forEach((btn) => {
-    btn.addEventListener('click', function() {
-        alert('You have downvoted this post!');
-    });
-});
-
-function loadMorePosts() {
-    let newPost = document.createElement('div');
-    newPost.classList.add('post');
-    newPost.innerHTML = `
-        <h3>New Trending Post</h3>
-        <p>This post was dynamically loaded. Content can be added here.</p>
-    `;
-    document.querySelector('.post-list').appendChild(newPost);
-}
-
-document.querySelector('.load-more').addEventListener('click', loadMorePosts);
