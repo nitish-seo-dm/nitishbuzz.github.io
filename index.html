@@ -3,70 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fusion.one - Explore Trending Topics">
-    <meta name="keywords" content="Trending, Articles, Buzz, Entertainment, Technology, Lifestyle">
+    <meta name="description" content="A website combining BuzzFeed and Reddit with trending topics and community-based interaction">
+    <meta name="keywords" content="BuzzFeed, Reddit, Trending, Topics, Entertainment, News">
     <meta name="author" content="Nitish Kumar">
-    <title>Fusion.one - Home</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Fusion.one</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-    <!-- Header Section -->
+    <!-- Header with Moving Text -->
     <header>
-        <div class="container">
-            <h1><a href="index.html">Fusion.one</a></h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="trending.html">Trending</a></li>
-                    <li><a href="articles.html">Articles</a></li>
-                    <li><a href="categories.html">Categories</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </nav>
-        </div>
+        <div class="moving-text">Stay Updated with the Latest Buzz!</div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="container">
-            <h2>Welcome to Fusion.one</h2>
-            <p>Get the latest trending topics, breaking news, and discussions on popular subjects from around the world.</p>
+    <!-- Pop-up Notification Button -->
+    <button id="popUpButton" class="popup-btn">Click for Special Offer!</button>
+
+    <!-- Pop-up Container -->
+    <div id="popup" class="popup-container">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>Exclusive Offer Just For You!</h2>
+            <p>Get 20% off your next visit by subscribing now.</p>
+        </div>
+    </div>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <h2>Trending Categories</h2>
+        <div class="category-list">
+            <div class="category-item">
+                <h3>Tech</h3>
+                <p>Latest updates and news from the world of technology.</p>
+            </div>
+            <div class="category-item">
+                <h3>Entertainment</h3>
+                <p>Trending movies, music, TV shows, and more!</p>
+            </div>
+            <div class="category-item">
+                <h3>Sports</h3>
+                <p>Catch the latest sports scores, news, and highlights.</p>
+            </div>
+            <div class="category-item">
+                <h3>Health</h3>
+                <p>Stay informed with the latest health and wellness trends.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Main Content Section -->
-    <section id="main-content">
-        <div class="container">
-            <h2>Trending Topics</h2>
-            <div class="topic-cards">
-                <div class="topic-card">
-                    <h3><a href="#">Technology</a></h3>
-                    <p>Stay updated with the latest tech news, gadgets, and innovations.</p>
-                </div>
-                <div class="topic-card">
-                    <h3><a href="#">Entertainment</a></h3>
-                    <p>Catch the latest in movies, TV shows, and celebrity gossip.</p>
-                </div>
-                <div class="topic-card">
-                    <h3><a href="#">Sports</a></h3>
-                    <p>All about your favorite teams, matches, and events.</p>
-                </div>
-            </div>
+    <!-- Content Cards -->
+    <section class="content-cards">
+        <div class="card">
+            <h3>Trending in Tech</h3>
+            <p>Latest updates in technology...</p>
+        </div>
+        <div class="card">
+            <h3>What's New in Entertainment?</h3>
+            <p>Explore trending movies and series...</p>
+        </div>
+        <div class="card">
+            <h3>Sports Highlights</h3>
+            <p>Catch up with the latest scores...</p>
         </div>
     </section>
 
     <!-- Footer Section -->
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Fusion.one. All Rights Reserved.</p>
-            <div class="social-media">
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
-            </div>
-        </div>
+        <p>Stay connected with us on social media</p>
+        <button id="happyButton" class="happy-btn">Celebrate!</button>
+        <div id="celebration" class="celebration"></div>
     </footer>
 
+    <script src="js/scripts.js"></script>
 </body>
 </html>
