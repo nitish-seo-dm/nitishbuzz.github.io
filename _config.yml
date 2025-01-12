@@ -1,0 +1,8 @@
+title: "Trendom World"
+description: "A combination of Reddit and BuzzFeed."
+baseurl: "" # Leave this empty for GitHub Pages
+url: "https://yourusername.github.io/trendom.world"
+theme: minima
+markdown: kramdown
+permalink: pretty
+paginate: 5
